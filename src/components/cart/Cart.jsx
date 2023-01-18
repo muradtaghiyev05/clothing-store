@@ -59,7 +59,7 @@ const Cart = () => {
     const total = cart.total;
     let productsText = 'Salam, mən ';
     products.map((product, index) => {
-      productsText += `${product.quantity} ədəd ${product.color} rəngli ${product.title} (${product.size})`;
+      productsText += `${product.quantity} ədəd ${product.color} rəngli ${product.brand} ${product.title} (${product.size})`;
       if (index !== products.length - 1) {
         productsText += ', '
       };
@@ -105,12 +105,15 @@ const Cart = () => {
                       </div>
                     </Link>
                     <div className='details'>
-                      <span className='detail-span'>
-                        <span className='what-span'>Məhsul:</span> <span className='brand-span'>{product.brand} </span>
-                        {product.title} 
-                        <span className='size-span'>({product.size})</span>
-                      </span>
-                      <span className='detail-span'><span className='what-span'>Qiyməti:</span> {product.price} AZN</span>
+                      <div className='detail-div'>
+                        <span className='what-span'>Məhsul: </span><br id='span-space' />
+                        <span className='brand-span'>{product.brand} </span>
+                        <span className='title-span'>{product.title}</span>
+                      </div>
+                      <div className='detail-div'>
+                        <div className='what-div'>Ölçü: {product.size}</div>
+                        <div className='what-div'>Qiymət: {product.price} AZN</div>
+                      </div>
                       <button className='remove-product-btn' onClick={() => handleRemove(product)}>Səbətdən Sil</button>
                     </div>
                   </div>
@@ -120,11 +123,9 @@ const Cart = () => {
                       <span className='amount'>{product.quantity}</span>
                       <button className='sm-btn' onClick={() => addItem(product)}>+</button>
                     </div>
-                    <div className='total-price'>
-                      <span className='detail-span' id='subtotal'>
-                        <b>Ümumi:</b> {product.price * product.quantity} AZN
-                      </span>
-                    </div>
+                    <span className='subtotal-span'>
+                      <b>Ümumi:</b> {product.price * product.quantity} AZN
+                    </span>
                   </div>
                 </div>
               ))}
