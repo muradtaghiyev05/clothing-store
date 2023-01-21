@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import BannerImg from '../../assets/other-images/home-banner2.webp';
+import CategoriesSlider from "../categories-slider/CategoriesSlider";
 import NewProducts from '../new-products/NewProducts'
 
 const Home = () => {
@@ -29,6 +30,9 @@ const Home = () => {
             <h1>Yeni Gələn Geyimlər</h1>
             <NewProducts />
             <Link to='/products/Bütün Geyimlər' className="all-link Link">Bütün Geyimlər</Link>
+        </div>
+        <div className="categories-slider-container">
+            <CategoriesSlider />
         </div>
     </div>
     )

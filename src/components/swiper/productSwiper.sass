@@ -1,14 +1,28 @@
-.product-images-slider
-    width: 100%
-    height: 100%
-
-    .swiper-slide
-        display: flex
-        align-items: center
-        justify-content: center
+.product-swiper-container
+    margin: auto
+    max-width: 15rem
+    align-self: center
+    @include flex(row, center, center)
+    @include responsive_xs
+        max-width: 20rem        
+    @include responsive_sm
+        max-width: 26rem
+    @include responsive_md
+        max-width: 28rem
+        align-self: flex-start
+        flex: 2
     
-    .swiper-button-prev
-        color: $black
+    .product-images-slider
+        width: 100%
+        height: 100%
 
-    .swiper-button-next
-        color: $black
+        .product-image-slide
+            display: flex
+            align-items: center
+            justify-content: center
+        
+        .swiper-button-prev
+            color: $black
+
+        .swiper-button-next
+            color: $black

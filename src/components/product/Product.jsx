@@ -56,9 +56,7 @@ const Product = () => {
           }}
         />
         <div className='product-page-container con'>
-          <div className='swiper-container'>
-            <ProductSwiper images={product.colors[currentSelection].images} />
-          </div>
+          <ProductSwiper images={product.colors[currentSelection].images} />
           <div className='product-detail-container'>
             <h3>{product.title}</h3>
             <span className='category-span'>{product.brand}</span>
