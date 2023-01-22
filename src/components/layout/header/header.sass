@@ -100,6 +100,8 @@
                         .dropdown-btn
                             @include flex(row, center, center)
                             gap: .2rem
+                            padding: 1.5rem 0
+                            cursor: pointer
 
                             img
                                 margin-top: .15rem
@@ -136,7 +138,14 @@
                                         background: none
                         
                         .active-dropdown
-                            @include flex(column)
+                            @media (max-width: 992px)  
+                                @include flex(column)
+                                
+                    .dropdown-item
+                        @include responsive_lg
+                            &:hover
+                                .dropdown-content
+                                    @include flex(column)
                                                     
                     #cart-item
                         @include responsive_lg

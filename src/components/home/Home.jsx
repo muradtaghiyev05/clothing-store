@@ -24,6 +24,7 @@ const Home = () => {
                     Kişi Geyim Dünyasında hər zövqə uyğun keyfiyyətli paltarlar tapa bilərsiniz. 
                     Bizi seçin və tərzinizi daha da gözəlləşdirin.
                 </p>
+                <Link to={`/products/Bütün Geyimlər`}><button className="hero-btn">Bütün Geyimlər</button></Link>
             </div>
         </div>
         <div className="new-products-container">

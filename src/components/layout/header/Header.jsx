@@ -39,8 +39,8 @@ const Header = () => {
                                     Ana Səhifə
                                 </Link>
                             </li>
-                            <li className='nav-item'>
-                                <div className='nav-links dropdown-btn' onClick={() => setDropdownToggle(prev => !prev)}>
+                            <li className='nav-item dropdown-item'>
+                                <div className='dropdown-btn' onClick={() => setDropdownToggle(prev => !prev)}>
                                     Geyim<img src={DownArrow} alt='down-arrow' />
                                 </div>
                                 <div
