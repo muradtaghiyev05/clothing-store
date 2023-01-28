@@ -6,7 +6,7 @@ import ProductCard from '../product-card/ProductCard';
 import SearchFilter from '../filters/search-filter/SearchFilter';
 import SortFilter from '../filters/sort-filter/SortFilter';
 import { motion } from "framer-motion"
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useParams, useSearchParams } from 'react-router-dom';
 import { clothes } from '../../clothes/data';
 
 const productsPerPage = 8;
@@ -24,6 +24,7 @@ const sortTypes = {
 
 const Products = () => {
 
+    const { pathname, hash, key } = useLocation();
     const params = useParams();
     const productsType = params.productsCategory;
     const [searchParams, setSearchParams] = useSearchParams();
@@ -54,11 +55,10 @@ const Products = () => {
 
     // scroll to top when changing
     useEffect(() => {
-        const changePage = () => {
-            window.scrollTo({ top: 0 });
-        };
-        changePage()
-    }, []);
+        if (hash === '') {
+            window.scrollTo(0, 0);
+        }
+    }, [pathname, hash, key]);
 
     useEffect(() => {
         if (productsType === 'Bütün Geyimlər') {
