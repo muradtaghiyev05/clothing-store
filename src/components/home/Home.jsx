@@ -1,17 +1,18 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import BannerImg from '../../assets/other-images/home-banner2.webp';
 import CategoriesSlider from "../categories-slider/CategoriesSlider";
 import NewProducts from '../new-products/NewProducts'
 
 const Home = () => {
 
+    const { pathname, hash, key } = useLocation();
+
     useEffect(() => {
-        const changePage = () => {
-            window.scrollTo({ top: 0 });
-        };
-        changePage()
-    }, []);
+        if (hash === '') {
+            window.scrollTo(0, 0);
+        }
+    }, [pathname, hash, key]);
 
     return (
     <div className='home'>

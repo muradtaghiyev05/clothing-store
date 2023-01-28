@@ -74,17 +74,17 @@ const Products = () => {
 
     return (
         <div className='products-page'>
+            <Toaster
+                position='bottom-left'
+                toastOptions={{
+                    duration: 5000
+                }}
+            />
             <h1 className='products-page-title' id='products'>Kişi - {productsType}</h1>
             <SearchFilter searchText={searchText} searchParams={searchParams} setSearchParams={setSearchParams} />
             <SortFilter currentSort={currentSort} searchParams={searchParams} setSearchParams={setSearchParams} />
             {searchResults.length ? (
                 <motion.div layout className='products-container'>
-                    <Toaster
-                        position='bottom-left'
-                        toastOptions={{
-                            duration: 5000
-                        }}
-                    />
                     {searchResults
                         .sort(sortTypes[currentSort].fn)
                         .slice(pagesVisited, pagesVisited + productsPerPage)

@@ -1,6 +1,6 @@
 import EmptyBag from '../../assets/other-images/empty-bag.svg'
 import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { addProduct, removeProduct, removeQuantity } from '../../redux/cartRedux'
 import { Toaster } from 'react-hot-toast'
@@ -10,12 +10,13 @@ const delivery = 3;
 
 const Cart = () => {
 
+  const { pathname, hash, key } = useLocation();
+
   useEffect(() => {
-    const changePage = () => {
-      window.scrollTo({ top: 0 });
-    };
-    changePage()
-  }, []);
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash, key]);
 
   const cart = useSelector(state => state.cart);
   const dispatch = useDispatch();

@@ -15,12 +15,12 @@ const About = () => {
 
   return (
     <div className='about-container con'>
-      <h1 className='about-title'>Saat Dünyası Haqqında</h1>
+      <h1 className='about-title'>Kişi Geyim Dünyası Haqqında</h1>
       <div className='about-detail-container'>
-        <p>Ətir Dünyası 2015-ci ildən bəri Azərbaycanda fəaliyyət göstərir və uğurla öz işini davam etdirir. 
-          Bu çoxillik fəaliyyətin verdiyi təcrübəyə və bu sektordakı biliyinə əsasən də Ətir Dünyası öz müştərilərinə 
+        <p>Kişi Geyim Dünyası 2015-ci ildən bəri Azərbaycanda fəaliyyət göstərir və uğurla öz işini davam etdirir. 
+          Bu çoxillik fəaliyyətin verdiyi təcrübəyə və bu sektordakı biliyinə əsasən də Kişi Geyim Dünyası öz müştərilərinə 
           tanınmış dünya istehsalçılarından orijinal məhsullar təqdim edir və hər zaman müştərilərinin məmnun qalması üçün çalışır. 
-          Ətir Dünyası olaraq hər daim bu sahədəki müasir trendləri və yenilikləri yaxından izləyirik və buna əsasən də, məhsullarımızın
+          Kişi Geyim Dünyası olaraq hər daim bu sahədəki müasir trendləri və yenilikləri yaxından izləyirik və buna əsasən də, məhsullarımızın
           çeşidlərini artırırıq.
         </p>
         <p id='text2'>Bizim üçün müştəri məmnuniyyəti çox önəmli olduğu üçün mağazamızda tez-tez endirimlər və xüsusi təkliflər mövcud olur. 
